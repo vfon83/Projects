@@ -1,4 +1,4 @@
-module Project_5 {
+module DecimalToBinary {
 	requires javafx.controls;
 	requires javafx.graphics;
 	
