@@ -1,0 +1,143 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+
+# Initialize variables
+E_voltages = None
+input_widgets = None
+
+# Function to create and display the input grid using ipywidgets
+def create_input_grid(rows, cols):
+    global E_voltages, input_widgets
+
+    # Initialize empty array for E_voltages
+    E_voltages = np.zeros((rows, cols))
+
+    # Create a list to hold the FloatText widgets
+    input_widgets = []
+
+    # Create FloatText widgets and store them in input_widgets
+    for i in range(rows):
+        row_widgets = []
+        for j in range(cols):
+            widget = widgets.FloatText(value=0.0, description=f'[{rows - 1 - i}, {j}]')
+            input_widgets.append(widget)
+            row_widgets.append(widget)
+        display(widgets.HBox(row_widgets))
+
+    display(update_button)
+
+# Function to handle widget value changes and update E_voltages
+def update_E_voltages(change):
+    global E_voltages, input_widgets
+    rows, cols = E_voltages.shape
+    for i in range(rows):
+        for j in range(cols):
+            E_voltages[i, j] = input_widgets[(rows - 1 - i) * cols + j].value  # Reverse row index
+
+# Function to update plots
+def update_plots(b=None):
+    global E_voltages
+
+    if E_voltages is None:
+        return  # Return if E_voltages is not initialized
+
+    # Calculate the average of each 2x2 sub-array
+    E_averages = np.array([
+            [E_voltages[i:i+2, j:j+2].mean() for j in range(E_voltages.shape[1]-1)]
+            for i in range(E_voltages.shape[0]-1)
+        ])
+
+    # Variables for the change in x and y
+    delta_x = 50
+    delta_y = 50
+
+    # Calculate Ex and Ey components
+    Ex = -1 * np.diff(E_voltages, axis=1) / delta_x
+    Ey = -1 * np.diff(E_voltages, axis=0) / delta_y
+
+    # Remove the Ex extra row and Ey extra column
+    Ex = Ex[:-1:]
+    Ey = Ey[:, :-1]
+
+    # Calculate the magnitude based on Ex and Ey components
+    E_magnitude = np.sqrt(Ex**2 + Ey**2)
+
+    # Add a small epsilon value to avoid division by zero
+    epsilon = 1e-10  # A very small value
+    E_magnitude += epsilon
+
+    # Calculate the unit vector of the Ex and Ey (Ex or Ey / E_magnitude)
+    Ex_normalized = Ex / E_magnitude
+    Ey_normalized = Ey / E_magnitude
+
+    # Set the meshgrid for the plots
+    x = np.arange(Ex.shape[1])
+    y = np.arange(Ex.shape[0])
+    X, Y = np.meshgrid(x, y)
+
+    # Clear previous plots
+    plt.clf()
+
+    # Set up figure and axes
+    fig, axs = plt.subplots(1, 2, figsize=(12, 6))
+    fig.suptitle('Electric Field', fontsize=40)
+
+    # First subplot (Unit Vector Field)
+    axs[0].quiver(X, Y, Ex_normalized, Ey_normalized, scale_units='xy', scale=1, color='b')
+    axs[0].set_title('UNIT VECTOR', fontsize=17)
+    axs[0].set_xlabel('x')
+    axs[0].set_ylabel('y')
+
+    # Adjust the plot limits for complete visibility
+    axs[0].set_xlim(-1, X.max() + 1)
+    axs[0].set_ylim(-1, Y.max() + 1)
+    axs[0].grid(True)
+
+    # Second subplot (Stream Field)
+    stream = axs[1].streamplot(X, Y, Ex, Ey, density=1, linewidth=4, arrowsize=4, color=E_averages, cmap='gist_heat_r')
+    colorbar = plt.colorbar(stream.lines, ax=axs[1], shrink=.7)
+    colorbar.set_label('Electric Potential (V)', fontsize=12, weight='bold')
+    axs[1].set_title('STREAM PLOT', fontsize=17)
+    axs[1].set_xlabel('x')
+    axs[1].set_ylabel('y')
+    axs[1].grid(True)
+
+    plt.tight_layout()
+    plt.show()
+
+# Create widgets for user input
+info_heading = widgets.HTML(value="<h1>Electric Field Plotter</h1>")
+info_body = widgets.HTML(value="""<div style="line-height: 1.2;">
+<h3 style="margin-bottom: 5px;">This tool allows you to visualize electric fields based on a table of voltages.</h3>
+<h3><ul style="margin-top: 0px; margin-bottom: 10px;">
+<li>Generate a grid</li>
+<li>Input the voltage values</li>
+<li>Click 'Update Plot' to see the electric field vectors and streamlines</li>
+</ul></h3>
+</div>""")
+
+
+rows_widget = widgets.IntSlider(value=6, min=3, max=15, step=1, description='Rows:')
+cols_widget = widgets.IntSlider(value=6, min=3, max=15, step=1, description='Cols:')
+generate_button = widgets.Button(description="Generate Grid")
+update_button = widgets.Button(description="Generate Plot")
+
+# Function to handle generate button click event
+def on_generate_grid(b):
+    clear_output()
+    display(info_heading, info_body, rows_widget, cols_widget, generate_button)
+    create_input_grid(rows_widget.value, cols_widget.value)
+
+# Function to handle update button click event
+def on_generate_plot(b):
+    update_E_voltages(None)
+    update_plots()
+
+# Attach button click events
+generate_button.on_click(on_generate_grid)
+update_button.on_click(on_generate_plot)
+
+# Display initial widgets
+display(info_heading, info_body, rows_widget, cols_widget, generate_button)
