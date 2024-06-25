@@ -1,7 +1,6 @@
 # Portfolio
 
 ElectricFieldPlotter:
-https://colab.research.google.com/drive/1Nl58G_zVNPCgM47aY66R4GHUF_8eZvpT?usp=sharing
-
+https://mybinder.org/v2/gh/vper83/Portfolio/HEAD?labpath=ElectricFieldPlotter%2FElectricFieldPlotter.ipynb[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vper83/Portfolio/HEAD?labpath=ElectricFieldPlotter%2FElectricFieldPlotter.ipynb)
 WebScrapingWebapp:
 https://vper83.github.io/Portfolio/
