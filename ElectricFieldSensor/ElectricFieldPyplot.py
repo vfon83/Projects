@@ -58,7 +58,7 @@ def update_plot(E_voltages):
         
     # First subplot (Unit Vector Field)
     axs[0].quiver(X, Y, Ex_normalized, Ey_normalized, scale_units='xy', scale=1, color='b')
-    axs[0].set_title('UNIT VECTOR', fontsize=17)
+    axs[0].set_title('QUIVER', fontsize=17)
     axs[0].set_xlabel('x')
     axs[0].set_ylabel('y')
     axs[0].set_xlim(-1, X.max() + 1)
@@ -66,17 +66,17 @@ def update_plot(E_voltages):
     axs[0].grid(True)
 
     # Second subplot (Stream Field)
-    stream_plot = axs[1].streamplot(X, Y, Ex_normalized, Ey_normalized, density=1, linewidth=3.5, arrowsize=3, color=E_averages, cmap='gist_heat_r')
-    axs[1].set_title('Stream Field', fontsize=17)
+    stream_plot = axs[1].streamplot(X, Y, Ex_normalized, Ey_normalized, density=1, linewidth=3.5, arrowsize=3, color=E_averages, cmap='gist_heat_r', broken_streamlines=False)
+    axs[1].set_title('STREAM', fontsize=17)
     axs[1].set_xlabel('x')
     axs[1].set_ylabel('y')
     axs[1].grid(True)
-    
+
     # Check if colorbar (cbar) has been initialized
     global cbar
     if cbar is None:
         cbar = plt.colorbar(stream_plot.lines, ax=axs[1], shrink=.7)
-        cbar.set_label('Electric Potential (V)', fontsize=12, weight='bold')
+        cbar.set_label('Voltage', fontsize=12, weight='bold')
     else:
         cbar.update_normal(stream_plot.lines)
 
@@ -87,7 +87,7 @@ def update_plot(E_voltages):
 
 def start_connection():
     # Set up the serial connection
-    port = "COM5"
+    port = "COM3"
     baudrate = 9600
     ser = serial.Serial(port, baudrate, timeout=1)
     time.sleep(2)
@@ -136,7 +136,6 @@ def start_connection():
                         plt.pause(2)
                         readings_count = 0
                         print("All readings captured.")
-                        print(E_voltages)
                         continue
 
     except KeyboardInterrupt:
