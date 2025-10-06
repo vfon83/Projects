@@ -22,6 +22,12 @@ Interactive Jupyter notebook application for visualizing electric fields with mu
 
 <img src="https://github.com/vfon83/Projects/raw/main/Images/Charges_Interacting.JPEG" width="400">
 
+
+
+
+
+[View Project](https://github.com/vfon83/CAMP-Capstone-Project)
+
 **Features:**
 - Interactive widget-based interface for charge placement
 - Real-time field visualization using quiver and stream plots
