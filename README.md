@@ -16,7 +16,7 @@ A number conversion system with GUI interface that converts between decimal, bin
 - Input validation and error handling
 - Convert decimal numbers (1-15) to binary, octal, and hexadecimal
 
-### [ElectricFieldPlotter - Interactive Field Visualization] (https://github.com/vfon83/Projects/tree/main/ElectricFieldPlotter)
+### [ElectricFieldPlotter - Interactive Field Visualization](https://github.com/vfon83/Projects/tree/main/ElectricFieldPlotter)
 **Technology:** Python, Jupyter Notebook, Matplotlib, NumPy, Pandas  
 Interactive Jupyter notebook application for visualizing electric fields with multiple charge configurations.
 
