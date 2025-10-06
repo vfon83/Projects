@@ -20,6 +20,8 @@ A number conversion system with GUI interface that converts between decimal, bin
 **Technology:** Python, Jupyter Notebook, Matplotlib, NumPy, Pandas  
 Interactive Jupyter notebook application for visualizing electric fields with multiple charge configurations.
 
+![Electric Field Visualization](https://github.com/vfon83/Projects/raw/main/Images/Charges_Interacting.JPEG)
+
 **Features:**
 - Interactive widget-based interface for charge placement
 - Real-time field visualization using quiver and stream plots
@@ -30,6 +32,8 @@ Interactive Jupyter notebook application for visualizing electric fields with mu
 ### ElectricFieldSensor - Arduino Data Acquisition System
 **Technology:** Python, Arduino, Serial Communication, Matplotlib  
 Real-time electric field measurement system using Arduino sensors with live data visualization.
+
+![Sensor Output](https://github.com/vfon83/Projects/raw/main/Images/Sensor_Output.jpg)
 
 **Features:**
 - Arduino-based voltage measurement system
@@ -42,6 +46,8 @@ Real-time electric field measurement system using Arduino sensors with live data
 **Technology:** Python, Scikit-learn, Streamlit, Pandas  
 Machine learning application for breast cancer diagnosis prediction using the Wisconsin Breast Cancer dataset.
 
+![Random Forest Classifier](https://github.com/vfon83/Projects/raw/main/Images/Random_Forest_Classifier.png)
+
 **Features:**
 - Random Forest Classifier for tumor classification
 - Interactive web interface using Streamlit
@@ -52,6 +58,12 @@ Machine learning application for breast cancer diagnosis prediction using the Wi
 ### CAMP - Construction AI Management Platform
 **Technology:** Next.js, TypeScript, Prisma, PostgreSQL, Supabase, Gemini API, Tailwind CSS  
 Construction AI Management Platform for optimizing construction project workflows and resource allocation.
+
+**Live:** [https://camp-capstone-project.vercel.app/](https://camp-capstone-project.vercel.app/)
+
+![CAMP Landing Page](https://github.com/vfon83/Projects/raw/main/Images/CAMP_Landing.png)
+
+![CAMP Output](https://github.com/vfon83/Projects/raw/main/Images/CAMP_Output.png)
 
 **Features:**
 - AI-powered document analysis and classification
