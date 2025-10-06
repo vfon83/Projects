@@ -61,7 +61,7 @@ Construction AI Management Platform for optimizing construction project workflow
 
 **Live:** [https://camp-capstone-project.vercel.app/](https://camp-capstone-project.vercel.app/)
 
-![CAMP Landing Page](https://github.com/vfon83/Projects/raw/main/Images/CAMP_Landing.png)
+<img src="https://github.com/vfon83/Projects/raw/main/Images/Charges_Interacting.JPEG" width="400">
 
 ![CAMP Output](https://github.com/vfon83/Projects/raw/main/Images/CAMP_Output.png)
 
