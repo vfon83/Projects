@@ -42,7 +42,7 @@ Real-time electric field measurement system using Arduino sensors with live data
 - 6x6 sensor grid for comprehensive field mapping
 - Real-time data processing and visualization
 
-### [Machine Learning - Breast Cancer Prediction](https://github.com/vfon83/Projects/tree/main/Machine Learning)
+### [Machine Learning - Breast Cancer Prediction](https://github.com/vfon83/Projects/tree/main/MachineLearning)
 **Technology:** Python, Scikit-learn, Streamlit, Pandas  
 Machine learning application for breast cancer diagnosis prediction using the Wisconsin Breast Cancer dataset.
 
