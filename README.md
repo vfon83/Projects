@@ -4,7 +4,7 @@ A collection of projects demonstrating skills in Java desktop applications, Pyth
 
 ## Projects
 
-### DecimalToBinary - Number Converter Application
+### [DecimalToBinary - Number Converter Application](https://github.com/vfon83/Projects/tree/main/DecimalToBinary)
 **Technology:** Java, JavaFX  
 A number conversion system with GUI interface that converts between decimal, binary, octal, and hexadecimal number systems.
 
@@ -29,7 +29,7 @@ Interactive Jupyter notebook application for visualizing electric fields with mu
 - Excel file integration for predefined charge setups
 - Real-time field calculations using Coulomb's law
 
-### ElectricFieldSensor - Arduino Data Acquisition Systemhttps(https://github.com/vfon83/Projects/tree/main/ElectricFieldSensor)
+### [ElectricFieldSensor - Arduino Data Acquisition Systemhttps](https://github.com/vfon83/Projects/tree/main/ElectricFieldSensor)
 **Technology:** Python, Arduino, Serial Communication, Matplotlib  
 Real-time electric field measurement system using Arduino sensors with live data visualization.
 
@@ -42,7 +42,7 @@ Real-time electric field measurement system using Arduino sensors with live data
 - 6x6 sensor grid for comprehensive field mapping
 - Real-time data processing and visualization
 
-### Machine Learning - Breast Cancer Prediction(https://github.com/vfon83/Projects/tree/main/Machine Learning)
+### [Machine Learning - Breast Cancer Prediction](https://github.com/vfon83/Projects/tree/main/Machine Learning)
 **Technology:** Python, Scikit-learn, Streamlit, Pandas  
 Machine learning application for breast cancer diagnosis prediction using the Wisconsin Breast Cancer dataset.
 
@@ -55,7 +55,7 @@ Machine learning application for breast cancer diagnosis prediction using the Wi
 - Comprehensive feature analysis (30+ tumor characteristics)
 - High accuracy model with detailed performance metrics
 
-### CAMP - Construction AI Management Platform(https://github.com/vfon83/CAMP-Capstone-Project)
+### [CAMP - Construction AI Management Platform](https://github.com/vfon83/CAMP-Capstone-Project)
 **Technology:** Next.js, TypeScript, Prisma, PostgreSQL, Supabase, Gemini API, Tailwind CSS  
 Construction AI Management Platform for optimizing construction project workflows and resource allocation.
 
