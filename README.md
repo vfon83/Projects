@@ -57,7 +57,7 @@ Machine learning application for breast cancer diagnosis prediction using the Wi
 
 ### [CAMP - Construction AI Management Platform](https://github.com/vfon83/CAMP-Capstone-Project)
 **Technology:** Next.js, TypeScript, Prisma, PostgreSQL, Supabase, Gemini API, Tailwind CSS  
-Construction AI Management Platform for optimizing construction project workflows and resource allocation.
+Construction Assistant Management Platform for optimizing construction project workflows and resource allocation.
 
 **Live:** [https://camp-capstone-project.vercel.app/](https://camp-capstone-project.vercel.app/)
 
