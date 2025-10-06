@@ -2,8 +2,6 @@
 
 A collection of projects demonstrating skills in Java desktop applications, Python data science, machine learning, and Arduino-based sensor systems.
 
-## Projects
-
 ### [DecimalToBinary - Number Converter Application](https://github.com/vfon83/Projects/tree/main/DecimalToBinary)
 **Technology:** Java, JavaFX  
 A number conversion system with GUI interface that converts between decimal, binary, octal, and hexadecimal number systems.
@@ -29,7 +27,7 @@ Interactive Jupyter notebook application for visualizing electric fields with mu
 - Excel file integration for predefined charge setups
 - Real-time field calculations using Coulomb's law
 
-### [ElectricFieldSensor - Arduino Data Acquisition Systemhttps](https://github.com/vfon83/Projects/tree/main/ElectricFieldSensor)
+### [ElectricFieldSensor - Arduino Data Acquisition System](https://github.com/vfon83/Projects/tree/main/ElectricFieldSensor)
 **Technology:** Python, Arduino, Serial Communication, Matplotlib  
 Real-time electric field measurement system using Arduino sensors with live data visualization.
 
