@@ -9,6 +9,7 @@ A collection of projects demonstrating skills in Java desktop applications, Pyth
 A number conversion system with GUI interface that converts between decimal, binary, octal, and hexadecimal number systems.
 
 **Features:**
+- OOP, Encapsulation, Polymorphism, Inheritance
 - Interactive JavaFX GUI with radio button selection
 - Bidirectional conversion (decimal ↔ binary/octal/hexadecimal)
 - Random number generation for testing
