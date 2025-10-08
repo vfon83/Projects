@@ -53,7 +53,7 @@ Machine learning application for breast cancer diagnosis prediction using the Wi
 - Comprehensive feature analysis (30+ tumor characteristics)
 - High accuracy model with detailed performance metrics
 
-### [CAMP - Construction AI Management Platform](https://github.com/vfon83/CAMP-Capstone-Project)
+### [CAMP - Construction Assistant Management Platform](https://github.com/vfon83/CAMP-Capstone-Project)
 **Technology:** Next.js, TypeScript, Prisma, PostgreSQL, Supabase, Gemini API, Tailwind CSS  
 Construction Assistant Management Platform for optimizing construction project workflows and resource allocation.
 
